@@ -10,9 +10,6 @@ export class Migration20231113142010 extends Migration {
       .withSchema("custom")
       .createTable("test", (t) => {
         t.increments("id").unsigned().primary();
-        t.string("name");
-        t.timestamp("created_at").notNullable();
-        t.timestamp("updated_at").notNullable();
       });
   }
 

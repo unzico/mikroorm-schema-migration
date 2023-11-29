@@ -28,18 +28,16 @@ function execute(client: Client) {
 }
 
 async function main() {
-  // Get the command line arguments
   const [, , command] = process.argv;
 
-  // Dispatch based on the command
   switch (command?.toLocaleLowerCase()) {
     case "tables": {
       const client = clientFactory();
       const cb: Callback = async (client) => {
         const result = await client.query(`
-        SELECT table_schema, table_name
-        FROM information_schema.tables
-        WHERE table_schema IN ('public', 'custom');
+          SELECT table_schema, table_name
+          FROM information_schema.tables
+          WHERE table_schema IN ('public', 'custom');
         `);
         console.table(result.rows);
       };
