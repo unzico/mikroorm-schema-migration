@@ -6,9 +6,10 @@ If you use a custom schema and define it in the config that is passed to the Mik
 
 ### Initial setup
 
-> yarn # Install dependencies
-
-> yarn docker pull && yarn docker up -d # Launch PostgreSQL database
+```bash
+$ yarn # Install dependencies
+$ yarn docker pull && yarn docker up -d # Launch PostgreSQL database
+```
 
 ### Reproduce bug
 
