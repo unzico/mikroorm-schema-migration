@@ -1,0 +1,30 @@
+{
+  "name": "mikroorm-schema-migration",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "cli": "ts-node src/cli.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docker": "docker compose -p mikroorm-schema-migration -f ./docker-compose.yml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unzico/mikroorm-schema-migration.git"
+  },
+  "devDependencies": {
+    "@types/pg": "8.10.9",
+    "ts-node": "10.9.1",
+    "typescript": "5.3.2"
+  },
+  "dependencies": {
+    "@mikro-orm/core": "5.9.4",
+    "@mikro-orm/migrations": "5.9.4",
+    "@mikro-orm/postgresql": "5.9.4",
+    "@mikro-orm/reflection": "5.9.4",
+    "pg": "8.11.3"
+  },
+  "packageManager": "yarn@4.0.2"
+}
